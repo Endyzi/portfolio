@@ -1,16 +1,24 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import Home from './pages/Home';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Portfolio from './pages/Portfolio';
+
 import ContainerComponent from './components/ContainerComponent';
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <ContainerComponent>
-        <h1>Välkommen till min portfolio!</h1>
-        <p>Här kommer din innehåll att synas.</p>
-      </ContainerComponent>
-    </div>
+    <Router>
+    <Navbar />
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/portfolio" element={<Portfolio />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
+  </Router>
   );
 }
 
