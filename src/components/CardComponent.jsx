@@ -3,10 +3,10 @@ import { Card, CardMedia, CardContent, Typography, CardActions, Button } from '@
 
 const CardComponent = ({ title, description, image, link }) => {
   return (
-    <Card sx={{ maxWidth: 345, margin: '1rem' }}>
+    <Card sx={{ maxWidth: 1200, margin: '1rem auto' }}>
       <CardMedia
         component="img"
-        height="140"
+        height="340"
         image={image}
         alt={title}
       />
