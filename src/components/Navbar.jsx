@@ -19,7 +19,12 @@ const Navbar = () => {
 
   return (
     <>
-      <AppBar position="static" color="primary">
+      <AppBar position="static"
+      sx={{
+        backgroundColor: 'rgba(0, 0, 0, 0.7)', 
+        boxShadow: 'none',
+      }}
+      >
         <Toolbar sx={{ justifyContent: 'space-between', flexWrap: 'wrap' }}>
           
           <Typography

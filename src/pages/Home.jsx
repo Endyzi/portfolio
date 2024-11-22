@@ -6,7 +6,7 @@ const Home = () => {
     <Box
       sx={{
         height: '100vh',
-        backgroundImage: 'url("/assets/background.jpeg")', 
+        backgroundImage: 'url("/assets/background2.jpg")', 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         display: 'flex',
@@ -15,13 +15,13 @@ const Home = () => {
         alignItems: 'center',
         color: 'white',
         textAlign: 'center',
-        textShadow: '2px 2px 5px rgba(0, 0, 0, 0.7)',
+        textShadow: '2px 2px 5px rgba(0, 0, 0, 0.9)',
       }}
     >
       <Typography variant="h2" sx={{ 
         marginTop: '-750px',
         fontSize: { xs: '2rem', md: '4rem' } }}>
-        Jonatan Nilhamn
+       Jonatan Nilhamn
       </Typography>
       <Typography variant="h5" sx={{ fontSize: { xs: '1rem', md: '1.8rem' }, marginTop: '1rem' }}>
         Systemutvecklare med passion för problemlösning och teknik

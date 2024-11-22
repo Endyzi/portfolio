@@ -16,10 +16,11 @@ const About = () => {
 
     <Box
     component="img"
-    src="/assets/Picture_001.jpg"
+    src="/assets/Picture_002.jpg"
     alt="Jonatan Nilhamn"
     sx={{
       width: { xs: '80%', md: '600px' },
+      marginTop: '5%',
       height: 'auto',
       borderRadius: '16px',
       boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
