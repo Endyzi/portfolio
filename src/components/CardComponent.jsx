@@ -8,27 +8,34 @@ const CardComponent = ({ title, description, image, link }) => {
         maxWidth: 1200,
         margin: '1rem auto',
         padding: '1rem',
-        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
         '@media (max-width: 768px)': {
           maxWidth: '100%',
+          margin: '0.5rem auto',
           padding: '0.5rem',
         },
       }}
     >
       <CardMedia
-        component="img"
-        height="240"
-        image={image}
-        alt={title}
-        sx={{
-          borderRadius: 2,
-          '@media (max-width: 768px)': {
-            height: 'auto',
-            width: '100%',
+       component="img"
+       height="340"
+       image={image}
+       alt={title}
+       sx={{
+         borderRadius: 2,
+         '@media (max-width: 768px)': {
+           height: 'auto',
+           width: '100%',
           },
         }}
       />
-      <CardContent>
+      <CardContent
+        sx={{
+          textAlign: 'center',
+          '@media (max-width: 768px)': {
+            padding: '0.5rem',
+          },
+        }}
+        >
         <Typography
           variant="h5"
           component="div"
@@ -44,11 +51,17 @@ const CardComponent = ({ title, description, image, link }) => {
         </Typography>
         <Typography
           variant="body2"
-          color="text.secondary"
-          sx={{
-            textAlign: 'center',
-            '@media (max-width: 768px)': {
-              fontSize: '0.9rem',
+      color="text.secondary"
+      sx={{
+        textAlign: 'center',
+        lineHeight: 1.5, // Ökar radavstånd för läsbarhet
+        overflow: 'hidden', // Hanterar överskridande text
+        textOverflow: 'ellipsis',
+        display: '-webkit-box',
+        WebkitLineClamp: 3, // Visar max 3 rader
+        WebkitBoxOrient: 'vertical',
+        '@media (max-width: 768px)': {
+          fontSize: '0.9rem',
             },
           }}
         >

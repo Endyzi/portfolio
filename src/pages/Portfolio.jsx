@@ -6,24 +6,27 @@ import { Box, Typography } from '@mui/material';
 const projects = [
   {
     title: 'Prodia',
-    description: 'Ett projekt inom hälsoteknik som fokuserar på läkemedel och analys.',
+    description: 'Ett företag inom hälsoteknik som fokuserar på drogtester och analyser.',
     image: '/assets/prodia.jpg',
     link: 'https://portal.prodia.se/',
-    detailedDescription: 'I Prodia arbetade jag med att implementera en valideringsfunktion för personnummer och förbättrade adminfunktionaliteten för patientdata. Projektet innebar också arbete med säker datahantering inom vården.',
+    detailedDescription:
+     'Mitt nyckelområde inom Prodia var att utveckla nya endpoints, refaktorering av gammal kod. Jag föreslog ett nytt sätt att hantera känslig patient data, där jag byggde en validering för personnummer. Tillsammans med den förändring av patientdata säkerhetsställde jag att man kunde dölja/visa personnummer vid behov. Jag byggde ännu mer stöd för HL7-data för fokus av olika labbsvar. och visa arbetade jag med att implementera en valideringsfunktion för personnummer och förbättrade adminfunktionaliteten för patientdata. Projektet innebar också arbete med säker datahantering inom vården. Tech-stack: PHP/Phalcon, React, SQL, Docker, Bitbucket.',
   },
   {
     title: 'Zenzr',
-    description: 'sensorövervakning',
+    description: 'Avancerade Sensorövervakning inom livsmedel & byggbranshen',
     image: '/assets/zenzr.jpg',
     link: 'https://www.zenzr.se/',
-    detailedDescription: 'På Zenzr optimerade jag ett API genom att minska laddningstiden från 16 sekunder till 2 sekunder. Jag identifierade och tog bort onödiga anrop till bakgrundsprocesser och implementerade caching för att förbättra svarstider.',
+    detailedDescription:
+     'Jag hade nöjet att utveckla delar av både frontend och backend för Zenzr. Det innebar bland annat data exportering av sensorerna till pdf dokument, dokumenthantering för respektive organisation så dem kunde läsa, redigera, ladda ner och radera dokument för sin organisation. För dokumenthanteringen integrerade jag AWS tjänst S3 som är en molntjänst för uppladdning av filer. Vid sidan av AWS S3 servern byggde jag en separat databas där jag spårade filnamnen och filinformation. Jag optimerade även laddtiden för flertalet endpoints genom att minska laddningstiden för den mest kritiska endpoint från 16 sekunder till 2 sekunder. Det innebar att jag identifierade och tog bort onödiga anrop till bakgrundsprocesser och implementerade caching för att förbättra svarstider. Tech-stack: PHP/Laravel, AWS, SQL, Docker, Vue.js, Quasar, Gitlab.',
   },
   {
     title: 'Larsson & Lange',
-    description: 'frisörsalong',
+    description: 'Stylist & Frisörsalong',
     image: '/assets/larsson-lange.jpg',
     link: 'https://www.larssonlange.se/',
-    detailedDescription: 'Jag byggde en modern webbplattform med fokus på bokningsfunktionalitet och integration av kundrecensioner. Plattformen anpassades för att möta Larsson & Langes specifika behov.',
+    detailedDescription:
+     'För det här projektet var mitt fokusområde att bygga om deras API som användes för deras bokningssystem. Utöver det byggde jag PHP script där jag hanterade gammal data som blev integrerat med den nya datan. Tech-stack: PHP, SQL.',
   },
 ];
 
@@ -51,7 +54,7 @@ const Portfolio = () => {
   };
 
   return (
-    <Box sx={{ padding: { xs: '1rem', md: '8rem' } }}>
+    <Box sx={{ padding: { xs: '2rem', md: '8rem' } }}>
     
       <Typography
         variant="h4"
@@ -82,26 +85,29 @@ const Portfolio = () => {
     
       <Box
         sx={{
-          maxWidth: { xs: '100%', md: '70%' },
-          margin: '2rem auto',
-          padding: '1rem',
-          backgroundColor: '#fff',
-          borderRadius: '8px',
+          maxWidth: { xs: '100%', md: '60%' },
+          margin: '2rem auto 0',
+          padding: { xs: '0 1rem', md: '0' }, // Lägg till padding för att undvika kantklippning
         }}
       >
         <Slider {...settingsText} ref={(slider) => setSlider2(slider)}>
           {projects.map((project, index) => (
             <Box
-              key={index}
-              sx={{
-                textAlign: 'center',
-                padding: '1rem',
+            key={index}
+            sx={{
+              textAlign: 'center',
+              padding: '1rem',
+              margin: '0 auto',
+              maxWidth: '100%',
+              overflow: 'hidden', // Förhindrar text från att spilla över
+              wordWrap: 'break-word', // Bryter ord för att förhindra spill
+              lineHeight: 1.5, // För bättre läsbarhet
               }}
             >
               <Typography
                 variant="h5"
                 sx={{
-                  fontSize: { xs: '1rem', md: '1.5rem' },
+                  fontSize: { xs: '1.2rem', md: '1.2rem' },
                   marginBottom: '0.5rem',
                 }}
               >
@@ -110,8 +116,11 @@ const Portfolio = () => {
               <Typography
                 variant="body1"
                 sx={{
-                  fontSize: { xs: '0.9rem', md: '1rem' },
+                  fontSize: { xs: '0.8rem', md: '1.1rem' },
                   textAlign: 'justify',
+                  padding: { xs: '0 1rem', md: '0.1' },
+                  overflowWrap: 'break-word', // För att bryta text som annars skulle spilla
+                  whiteSpace: 'normal', // För att undvika oönskad textöverlapp
                 }}
               >
                 {project.detailedDescription}

@@ -26,7 +26,7 @@ const About = () => {
     }}
     />
 
-      <Box sc={{ maxWidth: '600px', textAlign: 'center'}}>
+      <Box sc={{ maxWidth: '80%', textAlign: 'center'}}>
       <Typography variant="h4" gutterBottom>
         Om Mig
         </Typography>
