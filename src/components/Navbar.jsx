@@ -31,7 +31,7 @@ const Navbar = () => {
               flexGrow: { md: 0 },
             }}
           >
-            Jonatan Nilhamn
+            
           </Typography>
 
           

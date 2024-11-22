@@ -1,19 +1,32 @@
 import React from 'react';
+import { Box, Typography } from '@mui/material';
 
 const Home = () => {
   return (
-    <div style={{ padding: '8rem' }}>
-       <h1 style={{ textAlign: 'center'}}>Välkommen till min portfolio!</h1>
-       <p style={{ textAlign: 'center'}}> Här kan du ta reda på mer om mig och några av dem projekten jag jobbat med.
-       <p style={{ textAlign: 'center', marginTop: '6rem'}}>Lite kort om mig:</p>
-       <p>Jag är en skicklig Systemutvecklare.</p>
-       <p>Nyfiken som gärna lär sig nytt</p>
-       <p>Inte rädd för att jobba med tekniker/projekt som jag inte tidigare jobbat med.</p>
-       <p>Man är aldrig fullärd.</p>
-      
-       </p>
-       
-    </div>
+    <Box
+      sx={{
+        height: '100vh',
+        backgroundImage: 'url("/assets/background.jpeg")', 
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'center',
+        alignItems: 'center',
+        color: 'white',
+        textAlign: 'center',
+        textShadow: '2px 2px 5px rgba(0, 0, 0, 0.7)',
+      }}
+    >
+      <Typography variant="h2" sx={{ 
+        marginTop: '-750px',
+        fontSize: { xs: '2rem', md: '4rem' } }}>
+        Jonatan Nilhamn
+      </Typography>
+      <Typography variant="h5" sx={{ fontSize: { xs: '1rem', md: '1.8rem' }, marginTop: '1rem' }}>
+        Systemutvecklare med passion för problemlösning och teknik
+      </Typography>
+    </Box>
   );
 };
 
