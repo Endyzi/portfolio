@@ -54,11 +54,11 @@ const CardComponent = ({ title, description, image, link }) => {
       color="text.secondary"
       sx={{
         textAlign: 'center',
-        lineHeight: 1.5, // Ökar radavstånd för läsbarhet
-        overflow: 'hidden', // Hanterar överskridande text
+        lineHeight: 1.5, 
+        overflow: 'hidden', 
         textOverflow: 'ellipsis',
         display: '-webkit-box',
-        WebkitLineClamp: 3, // Visar max 3 rader
+        WebkitLineClamp: 3,
         WebkitBoxOrient: 'vertical',
         '@media (max-width: 768px)': {
           fontSize: '0.9rem',

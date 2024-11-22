@@ -87,7 +87,7 @@ const Portfolio = () => {
         sx={{
           maxWidth: { xs: '100%', md: '60%' },
           margin: '2rem auto 0',
-          padding: { xs: '0 1rem', md: '0' }, // Lägg till padding för att undvika kantklippning
+          padding: { xs: '0 1rem', md: '0' }, 
         }}
       >
         <Slider {...settingsText} ref={(slider) => setSlider2(slider)}>
@@ -99,9 +99,9 @@ const Portfolio = () => {
               padding: '1rem',
               margin: '0 auto',
               maxWidth: '100%',
-              overflow: 'hidden', // Förhindrar text från att spilla över
-              wordWrap: 'break-word', // Bryter ord för att förhindra spill
-              lineHeight: 1.5, // För bättre läsbarhet
+              overflow: 'hidden', 
+              wordWrap: 'break-word', 
+              lineHeight: 1.5, 
               }}
             >
               <Typography
@@ -119,8 +119,8 @@ const Portfolio = () => {
                   fontSize: { xs: '0.8rem', md: '1.1rem' },
                   textAlign: 'justify',
                   padding: { xs: '0 1rem', md: '0.1' },
-                  overflowWrap: 'break-word', // För att bryta text som annars skulle spilla
-                  whiteSpace: 'normal', // För att undvika oönskad textöverlapp
+                  overflowWrap: 'break-word', 
+                  whiteSpace: 'normal', 
                 }}
               >
                 {project.detailedDescription}

@@ -1,6 +1,7 @@
 # Portfolio
 
 This is a portfolio to showcase some projects I've have had the pleasure working on and also to highlight my skills.
+I will update the portfolio along the way whenever I'm having a new project.
 
 
 
