@@ -1,60 +1,93 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography, Button, Box, Icon, IconButton } from '@mui/material';
+import React, { useState } from 'react';
+import { AppBar, Toolbar, IconButton, Box, Button, Drawer, List, ListItem, ListItemText, Typography } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import GithubIcon from '@mui/icons-material/GitHub';
 
 const Navbar = () => {
-  return (
-    <AppBar position="static" color="primary">
-    <Toolbar>
-        <Typography variant ="h6" sx={{ flexGrow: 0, marginRight: '2rem' }}>
-            JN
-        </Typography>
-    
-    <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            flexGrow: 1, 
-          }}
-        >
-      <Button color="inherit" component={Link} to="/" sx={{ mx: 2 }}>
-            Hem
-          </Button>
-          <Button color="inherit" component={Link} to="/about" sx={{ mx: 2 }}>
-            Om Mig
-          </Button>
-          <Button color="inherit" component={Link} to="/portfolio" sx={{ mx: 2 }}>
-            Portfolio
-          </Button>
-          <Button color="inherit" component={Link} to="/contact" sx={{ mx: 2 }}>
-            Kontakt
-          </Button>
-      </Box>
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
 
-      <Box>
-        <IconButton
-        color="inherit"
-        href="https://www.linkedin.com/in/jonatan-nilhamn-3b816b183/"
-        target="_blank"
-        rel="noopener noreferrer"
-        sx={{ mx: 1 }}
+  const toggleDrawer = (open) => () => {
+    setIsDrawerOpen(open);
+  };
+
+  const navLinks = [
+    { text: 'Hem', path: '/' },
+    { text: 'Om Mig', path: '/about' },
+    { text: 'Portfolio', path: '/portfolio' },
+    { text: 'Kontakt', path: '/contact' },
+  ];
+
+  return (
+    <>
+      <AppBar position="static" color="primary">
+        <Toolbar sx={{ justifyContent: 'space-between', flexWrap: 'wrap' }}>
+          
+          <Typography
+            variant="h6"
+            sx={{
+              textAlign: 'left',
+              display: { xs: 'block', md: 'block' },
+              margin: { xs: '0 auto', md: '0' }, 
+              flexGrow: { md: 0 },
+            }}
+          >
+            Jonatan Nilhamn
+          </Typography>
+
+          
+          <Box
+            sx={{
+              display: { xs: 'none', md: 'flex' },
+              justifyContent: 'center',
+              gap: '2rem',
+              flexGrow: 1,
+            }}
+          >
+            {navLinks.map((link) => (
+              <Button
+                key={link.text}
+                color="inherit"
+                component={Link}
+                to={link.path}
+                sx={{
+                  textTransform: 'none',
+                }}
+              >
+                {link.text}
+              </Button>
+            ))}
+          </Box>
+
+          
+          <IconButton
+            color="inherit"
+            edge="start"
+            sx={{ display: { xs: 'block', md: 'none' } }}
+            onClick={toggleDrawer(true)}
+          >
+            <MenuIcon />
+          </IconButton>
+        </Toolbar>
+      </AppBar>
+
+      
+      <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)}>
+        <Box
+          sx={{ width: 250 }}
+          role="presentation"
+          onClick={toggleDrawer(false)}
+          onKeyDown={toggleDrawer(false)}
         >
-            <LinkedInIcon/>
-        </IconButton>
-        <IconButton
-        color="inherit"
-        href="https://github.com/endyzi"
-        target="_blank"
-        rel="noopener noreferrer"
-        sx={{ mx: 1 }}
-        >
-            <GithubIcon />
-        </IconButton>
-      </Box>
-    </Toolbar>
-  </AppBar>
+          <List>
+            {navLinks.map((link) => (
+              <ListItem button key={link.text} component={Link} to={link.path}>
+                <ListItemText primary={link.text} />
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </Drawer>
+    </>
   );
 };
 
