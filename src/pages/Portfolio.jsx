@@ -10,7 +10,7 @@ const projects = [
     image: '/assets/prodia.jpg',
     link: 'https://portal.prodia.se/',
     detailedDescription:
-     'Mitt nyckelområde inom Prodia var att utveckla nya endpoints, refaktorering av gammal kod. Jag föreslog ett nytt sätt att hantera känslig patient data, där jag byggde en validering för personnummer. Tillsammans med den förändring av patientdata säkerhetsställde jag att man kunde dölja/visa personnummer vid behov. Jag byggde ännu mer stöd för HL7-data för fokus av olika labbsvar. och visa arbetade jag med att implementera en valideringsfunktion för personnummer och förbättrade adminfunktionaliteten för patientdata. Projektet innebar också arbete med säker datahantering inom vården. Tech-stack: PHP/Phalcon, React, SQL, Docker, Bitbucket.',
+     'Mitt nyckelområde inom Prodia var att utveckla nya endpoints, refaktorering av gammal kod. Jag föreslog ett nytt sätt att hantera känslig patient data, där jag byggde en validering för personnummer. Tillsammans med den förändring av patientdata säkerhetsställde jag att man kunde dölja/visa personnummer vid behov. Jag byggde ännu mer stöd för HL7-data för fokus av olika labbsvar. Projektet innebar också arbete med säker datahantering inom vården. Tech-stack: PHP/Phalcon, React, SQL, Docker, Bitbucket.',
   },
   {
     title: 'Zenzr',
