@@ -21,7 +21,7 @@ const Contact = () => {
       }}
     >
       <Typography variant="h2" sx={{ 
-        marginTop: '-750px',
+        marginTop: '-650px',
         fontSize: { xs: '2rem', md: '4rem' } }}>
        Kontakt
       </Typography>
