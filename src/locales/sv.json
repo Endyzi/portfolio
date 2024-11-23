@@ -1,8 +1,50 @@
 {
-    "home": {
-      "title": "Jonatan Nilhamn",
-      "description": "Systemutvecklare med passion för problemlösning och teknik",
-      "portfolio": "Portfolio"
-    }
+  "nav": {
+    "home": "Hem",
+    "about": "Om Mig",
+    "portfolio": "Portfolio",
+    "contact": "Kontakt"
+  },
+
+  "home": {
+    "title": "Jonatan Nilhamn",
+    "description": "Systemutvecklare med passion för problemlösning och teknik"
+  },
+
+  "about": {
+    "title": "Om Mig",
+    "description": "Jag är en Systemutvecklare med över 4 år's erfarenhet inom diverse projekt. 2019 tog jag examen som webbutvecklare från Medieinstitutet i Malmö.Sedan dess har jag jobbat med både stora och små projekt. Som person är jag driven, målinriktad, positiv, modig och nytänkande. Jag strävar efter att alltid utvecklas, tech-branschen är en ständigt växande industri som snabbt förändras samtidigt som kräver att man är nyfiken. Utöver mitt intresse för utveckling och tech så är mina intressen styrketräning, datorer, programmering, spel och att umgås med vänner."
+  },
+
+  "portfolio": {
+    "title": "Portfolio",
+    "projects": [
+      {
+        "title": "Prodia",
+        "description": "Ett företag inom hälsoteknik som fokuserar på drogtester och analyser.",
+        "detailedDescription": "Mitt nyckelområde inom Prodia var att utveckla nya endpoints, refaktorering av gammal kod. Jag föreslog ett nytt sätt att hantera känslig patient data, där jag byggde en validering för personnummer. Tillsammans med den förändring av patientdata säkerhetsställde jag att man kunde dölja/visa personnummer vid behov. Jag byggde ännu mer stöd för HL7-data för fokus av olika labbsvar. Projektet innebar också arbete med säker datahantering inom vården. Tech-stack: PHP/Phalcon, React, SQL, Docker, Bitbucket.",
+          "image": "/assets/prodia.jpg",
+        "link": "https://www.portal.prodia.se/"
+      },
+      {
+        "title": "Zenzr",
+        "description": "Avancerad sensorövervakning för livsmedels- och byggbranschen.",
+        "detailedDescription": "Jag hade nöjet att utveckla delar av både frontend och backend för Zenzr. Det innebar bland annat data exportering av sensorerna till pdf dokument, dokumenthantering för respektive organisation så dem kunde läsa, redigera, ladda ner och radera dokument för sin organisation. För dokumenthanteringen integrerade jag AWS tjänst S3 som är en molntjänst för uppladdning av filer. Vid sidan av AWS S3 servern byggde jag en separat databas där jag spårade filnamnen och filinformation. Jag optimerade även laddtiden för flertalet endpoints genom att minska laddningstiden för den mest kritiska endpoint från 16 sekunder till 2 sekunder. Det innebar att jag identifierade och tog bort onödiga anrop till bakgrundsprocesser och implementerade caching för att förbättra svarstider. Tech-stack: PHP/Laravel, AWS, SQL, Docker, Vue.js, Quasar, Gitlab.",
+        "image": "/assets/zenzr.jpg",
+        "link": "https://www.zenzr.se/"
+      },
+      {
+        "title": "Larsson & Lange",
+        "description": "Stylist- och Frisörsalong.",
+        "detailedDescription": "För det här projektet var mitt fokusområde att bygga om deras API som användes för deras bokningssystem. Utöver det byggde jag PHP script där jag hanterade gammal data som blev integrerat med den nya datan. Tech-stack: PHP, SQL.",
+          "image": "/assets/larsson-lange.jpg",
+        "link": "https://www.larssonlange.se/"
+      }
+    ]
+  },
+
+  "contact": {
+    "title": "Kontakt",
+    "email": "private_nilhamn@hotmail.com"
   }
-  
+}

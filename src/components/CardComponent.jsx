@@ -56,7 +56,7 @@ const CardComponent = ({ title, description, image, link }) => {
             },
           }}
         >
-          {title}
+          
         </Typography>
         <Typography
           variant="body2"
@@ -76,7 +76,6 @@ const CardComponent = ({ title, description, image, link }) => {
         >
           {description}
         </Typography>
-        
       </CardContent>
     </Card>
   );

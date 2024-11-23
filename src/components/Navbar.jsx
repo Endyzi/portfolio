@@ -2,80 +2,110 @@ import React, { useState } from 'react';
 import { AppBar, Toolbar, IconButton, Box, Button, Drawer, List, ListItem, ListItemText, Typography } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const { t, i18n } = useTranslation(); 
 
   const toggleDrawer = (open) => () => {
     setIsDrawerOpen(open);
   };
 
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng); 
+  };
+
   const navLinks = [
-    { text: 'Hem', path: '/' },
-    { text: 'Om Mig', path: '/about' },
-    { text: 'Portfolio', path: '/portfolio' },
-    { text: 'Kontakt', path: '/contact' },
+    { text: t('nav.home'), path: '/' },
+    { text: t('nav.about'), path: '/about' },
+    { text: t('nav.portfolio'), path: '/portfolio' },
+    { text: t('nav.contact'), path: '/contact' },
   ];
 
   return (
     <>
-      <AppBar position="static"
+    <AppBar
+  position="static"
+  sx={{
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    boxShadow: 'none',
+  }}
+>
+  <Toolbar
+    sx={{
+      justifyContent: 'space-between', 
+      display: 'flex',
+      alignItems: 'center',
+      flexWrap: 'wrap',
+    }}
+  >
+    
+    <Box
       sx={{
-        backgroundColor: 'rgba(0, 0, 0, 0.7)', 
-        boxShadow: 'none',
+        display: 'flex',
+        gap: '1rem', 
+        alignItems: 'center',
       }}
+    >
+      <Button
+      onClick={() => changeLanguage('sv')}
+      color="inherit"
+      sx={{
+        textTransform: 'none',
+        }}
       >
-        <Toolbar sx={{ justifyContent: 'space-between', flexWrap: 'wrap' }}>
-          
-          <Typography
-            variant="h6"
-            sx={{
-              textAlign: 'left',
-              display: { xs: 'block', md: 'block' },
-              margin: { xs: '0 auto', md: '0' }, 
-              flexGrow: { md: 0 },
-            }}
-          >
-            
-          </Typography>
+        SWE
+      </Button>
+      <Button
+       onClick={() => changeLanguage('en')} 
+       color="inherit"
+       sx={{
+         textTransform: 'none',
+        }}
+      >
+        ENG
+      </Button>
+    </Box>
 
-          
-          <Box
-            sx={{
-              display: { xs: 'none', md: 'flex' },
-              justifyContent: 'center',
-              gap: '2rem',
-              flexGrow: 1,
-            }}
-          >
-            {navLinks.map((link) => (
-              <Button
-                key={link.text}
-                color="inherit"
-                component={Link}
-                to={link.path}
-                sx={{
-                  textTransform: 'none',
-                }}
-              >
-                {link.text}
-              </Button>
-            ))}
-          </Box>
+    
+    <Box
+      sx={{
+        display: { xs: 'none', md: 'flex' },
+        justifyContent: 'center',
+        gap: '2rem',
+        flexGrow: 1,
+      }}
+    >
+      {navLinks.map((link) => (
+        <Button
+          key={link.text}
+          color="inherit"
+          component={Link}
+          to={link.path}
+          sx={{
+            textTransform: 'none',
+          }}
+        >
+          {link.text}
+        </Button>
+      ))}
+    </Box>
 
-          
-          <IconButton
-            color="inherit"
-            edge="start"
-            sx={{ display: { xs: 'block', md: 'none' } }}
-            onClick={toggleDrawer(true)}
-          >
-            <MenuIcon />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
+   
+    <IconButton
+      color="inherit"
+      edge="start"
+      sx={{ display: { xs: 'block', md: 'none' } }}
+      onClick={toggleDrawer(true)}
+    >
+      <MenuIcon />
+    </IconButton>
+  </Toolbar>
+</AppBar>
 
-      
+
+    
       <Drawer anchor="left" open={isDrawerOpen} onClose={toggleDrawer(false)}>
         <Box
           sx={{ width: 250 }}
@@ -83,6 +113,16 @@ const Navbar = () => {
           onClick={toggleDrawer(false)}
           onKeyDown={toggleDrawer(false)}
         >
+          
+          <Box sx={{ display: 'flex', justifyContent: 'center', gap: '1rem', my: 2 }}>
+            <Button onClick={() => changeLanguage('sv')} sx={{ textTransform: 'none' }}>
+              SWE
+            </Button>
+            <Button onClick={() => changeLanguage('en')} sx={{ textTransform: 'none' }}>
+              ENG
+            </Button>
+          </Box>
+
           <List>
             {navLinks.map((link) => (
               <ListItem button key={link.text} component={Link} to={link.path}>

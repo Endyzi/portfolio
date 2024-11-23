@@ -2,8 +2,12 @@ import React from 'react';
 import { Box, Typography, Icon, IconButton } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+
+  const { t } = useTranslation();
+
   return (
     <Box
       sx={{
@@ -24,10 +28,10 @@ const Contact = () => {
         marginTop: {xs: '-700px', sm: '-800px', md: '-950px'} ,
         marginLeft: {xs: '5px', md: '1800px'},
         fontSize: { xs: '2rem', md: '3rem' } }}>
-       Kontakt
+       {t('contact.title')}
       </Typography>
       <Typography variant="h5" sx={{ fontSize: { xs: '1rem', md: '1.5rem' }, marginTop: {xs: '1rem', md: '1rem'}, marginLeft: {xs: '5px', md: '1800px'}  }}>
-        private_nilhamn@hotmail.com
+      {t('contact.email')}
       </Typography>
 
       <Box>

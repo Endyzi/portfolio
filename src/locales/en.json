@@ -1,8 +1,52 @@
 {
+    "nav": {
+      "home": "Home",
+      "about": "About Me",
+      "portfolio": "Portfolio",
+      "contact": "Contact"
+    },
+
     "home": {
-      "title": "Jonatan Nilhamn",
-      "description": "Software Engineer with a passion for problem solving and tech",
-      "portfolio": "Portfolio"
+        "title": "Jonatan Nilhamn",
+        "description": "Software Engineer with a passion for problemsolving and tech"
+    },
+
+    "about": {
+        "title": "About",
+        "description": "I'm a Software Engineer with over 4 years of experience, I graduated in 2019 as a Web Developer from the Media Institute in Malmö. I have since then had the pleasure to work on various projects both large and small projects. As a person, I am driven, goal-oriented, positive, courageous and innovative. I strive to always develop new skills and knowledge, the tech industry is an ever-growing industry that changes rapidly,it requires one to always be curious. Apart from my passion for programming and tech, some of my other interests are weightlifting, health/fitness, coaching, and spending time with friends. I also run a discord server on my spare time where we discuss tech/development and of course gaming."
+    },
+
+    "portfolio": {
+        "title": "Portfolio",
+        "projects": [
+            {
+              "title": "Prodia",
+              "description": "A company in health technology focusing on drug testing and analysis.",
+              "detailedDescription": "My key area within Prodia was developing new endpoints, refactoring old code and bugfixes. One of the major things I did was that I proposed a new way to handle sensitive patient data, where I built a validation for social security numbers. Along with the change of patient data, I ensured that you could hide/show social security numbers if needed. I built even more support for HL7 data for the focus of different lab answers. The project also involved work with secure data management in healthcare. Tech stack: PHP/Phalcon, React, SQL, Docker, Bitbucket.",
+              "image": "/assets/prodia.jpg",
+              "link": "https://www.portal.prodia.se/"
+            },
+            {
+              "title": "Zenzr",
+              "description": "Advanced sensor monitoring for food & construction industries.",
+              "detailedDescription": "I had the pleasure of developing parts of both the frontend and backend for Zenzr. This meant, among other things, data export of the sensors to pdf documents, document management for each organization so that they could read, edit, download and delete documents for their organization. For the document management, I integrated the AWS service S3, which is a cloud service for uploading files. Alongside the AWS S3 server, I built a separate database where I tracked the file names and file information. I also optimized the load time for several endpoints by reducing the load time for the most critical endpoint from 16 seconds to 2 seconds. This involved identifying and removing unnecessary calls to background processes and implementing caching to improve response times. Tech stack: PHP/Laravel, AWS, SQL, Docker, Vue.js, Quasar, Gitlab.",
+              "image": "/assets/zenzr.jpg",
+              "link": "https://www.zenzr.se/"
+            },
+            {
+              "title": "Larsson & Lange",
+              "description": "Stylist & hairdressing salon.",
+              "detailedDescription": "For this project, my area of ​​focus was to rebuild their API used for their booking system. In addition to that, I built PHP scripts where I managed old data that was integrated with the new data. Tech stack: PHP, SQL.",
+              "image": "/assets/larsson-lange.jpg",
+              "link": "https://www.larssonlange.se/"
+            }
+          ]
+    },
+
+    "contact": {
+        "title": "Contact",
+        "email": "private_nilhamn@hotmail.com"
+
     }
   }
   

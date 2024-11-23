@@ -1,7 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Box, Typography } from '@mui/material';
 
 const Home = () => {
+
+  const { t } = useTranslation();
+  
   return (
     <Box
       sx={{
@@ -21,10 +25,10 @@ const Home = () => {
       <Typography variant="h2" sx={{ 
         marginTop: '-650px',
         fontSize: { xs: '2rem', md: '4rem' } }}>
-       Jonatan Nilhamn
+       {t('home.title')}
       </Typography>
       <Typography variant="h5" sx={{ fontSize: { xs: '1rem', md: '1.8rem' }, marginTop: '1rem' }}>
-        Systemutvecklare med passion för problemlösning och teknik
+      {t('home.description')}
       </Typography>
     </Box>
   );
