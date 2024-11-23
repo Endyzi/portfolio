@@ -16,7 +16,7 @@ const About = () => {
 
     <Box
     component="img"
-    src="/assets/Picture_002.jpg"
+    src="/assets/Picture_002.webp"
     alt="Jonatan Nilhamn"
     sx={{
       width: { xs: '80%', md: '600px' },

@@ -8,7 +8,7 @@ const Contact = () => {
     <Box
       sx={{
         height: '100vh',
-        backgroundImage: 'url("/assets/background.jpeg")', 
+        backgroundImage: 'url("/assets/background.webp")', 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         display: 'flex',
@@ -21,11 +21,12 @@ const Contact = () => {
       }}
     >
       <Typography variant="h2" sx={{ 
-        marginTop: '-650px',
-        fontSize: { xs: '2rem', md: '4rem' } }}>
+        marginTop: {xs: '-700px', sm: '-800px', md: '-950px'} ,
+        marginLeft: {xs: '5px', md: '1800px'},
+        fontSize: { xs: '2rem', md: '3rem' } }}>
        Kontakt
       </Typography>
-      <Typography variant="h5" sx={{ fontSize: { xs: '1rem', md: '1.5rem' }, marginTop: '1rem' }}>
+      <Typography variant="h5" sx={{ fontSize: { xs: '1rem', md: '1.5rem' }, marginTop: {xs: '1rem', md: '1rem'}, marginLeft: {xs: '5px', md: '1800px'}  }}>
         private_nilhamn@hotmail.com
       </Typography>
 
@@ -35,7 +36,7 @@ const Contact = () => {
         href="https://www.linkedin.com/in/jonatan-nilhamn-3b816b183/"
         target="_blank"
         rel="noopener noreferrer"
-        sx={{ mx: 1 }}
+        sx={{ marginLeft: { xs: '5px',  md: '1800px'}  }}
         >
             <LinkedInIcon/>
         </IconButton>
