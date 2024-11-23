@@ -36,12 +36,21 @@ const CardComponent = ({ title, description, image, link }) => {
           },
         }}
         >
-        <Typography
+      <Typography
           variant="h5"
-          component="div"
+          component="a"
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
           sx={{
             textAlign: 'center',
             marginBottom: '0.5rem',
+            textDecoration: 'none',
+            color: 'inherit',
+            '&:hover': {
+              color: '#007bff',
+              textDecoration: 'none',
+            },
             '@media (max-width: 768px)': {
               fontSize: '1.2rem',
             },
@@ -51,22 +60,23 @@ const CardComponent = ({ title, description, image, link }) => {
         </Typography>
         <Typography
           variant="body2"
-      color="text.secondary"
-      sx={{
-        textAlign: 'center',
-        lineHeight: 1.5, 
-        overflow: 'hidden', 
-        textOverflow: 'ellipsis',
-        display: '-webkit-box',
-        WebkitLineClamp: 3,
-        WebkitBoxOrient: 'vertical',
-        '@media (max-width: 768px)': {
-          fontSize: '0.9rem',
+          color="text.secondary"
+          sx={{
+            textAlign: 'center',
+            lineHeight: 1.5,
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            display: '-webkit-box',
+            WebkitLineClamp: 3,
+            WebkitBoxOrient: 'vertical',
+            '@media (max-width: 768px)': {
+              fontSize: '0.9rem',
             },
           }}
         >
           {description}
         </Typography>
+        
       </CardContent>
     </Card>
   );
