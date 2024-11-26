@@ -23,9 +23,9 @@ const About = () => {
     src="/assets/Picture_002.webp"
     alt="Jonatan Nilhamn"
     sx={{
-      width: { xs: '80%', md: '600px' },
+      width: { xs: '50%', sm: '30%', md: '400px' },
       marginTop: '5%',
-      height: 'auto',
+      height: {xs: '50%', sm: '30%',  md: 'auto'}, 
       borderRadius: '16px',
       boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
     }}

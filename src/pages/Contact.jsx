@@ -25,7 +25,7 @@ const Contact = () => {
       }}
     >
       <Typography variant="h2" sx={{ 
-        marginTop: {xs: '-700px', sm: '-800px', md: '-950px'} ,
+        marginTop: {xs: '-80vh', sm: '-800px', md: '-950px'} ,
         marginLeft: {xs: '5px', md: '1800px'},
         fontSize: { xs: '2rem', md: '3rem' } }}>
        {t('contact.title')}

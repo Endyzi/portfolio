@@ -23,7 +23,7 @@ const Home = () => {
       }}
     >
       <Typography variant="h2" sx={{ 
-        marginTop: '-650px',
+        marginTop: {xs: '-80vh', sm: '-800px', md: '-650px'} ,
         fontSize: { xs: '2rem', md: '4rem' } }}>
        {t('home.title')}
       </Typography>
