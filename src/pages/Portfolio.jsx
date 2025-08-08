@@ -99,6 +99,18 @@ const Portfolio = () => {
               >
                 {project.detailedDescription}
               </Typography>
+              {project.link && (
+                <Box sx={{ mt: 2 }}>
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: '#1976d2', textDecoration: 'underline', fontWeight: 500 }}
+                  >
+                    {project.link}
+                  </a>
+                </Box>
+              )}
             </Box>
           ))}
         </Slider>

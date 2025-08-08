@@ -17,7 +17,7 @@ const CardComponent = ({ title, description, image, link }) => {
     >
       <CardMedia
        component="img"
-       height="340"
+       height="540"
        image={image}
        alt={title}
        sx={{

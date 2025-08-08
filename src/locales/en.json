@@ -24,7 +24,7 @@
               "description": "A company in health technology focusing on drug testing and analysis.",
               "detailedDescription": "My key area within Prodia was developing new endpoints, refactoring old code and bugfixes. One of the major things I did was that I proposed a new way to handle sensitive patient data, where I built a validation for social security numbers. Along with the change of patient data, I ensured that you could hide/show social security numbers if needed. I built even more support for HL7 data for the focus of different lab answers. The project also involved work with secure data management in healthcare. Tech stack: PHP/Phalcon, React, SQL, Docker, Bitbucket.",
               "image": "/assets/prodia.jpg",
-              "link": "https://www.portal.prodia.se/"
+              "link": "https://portal.prodia.se/"
             },
             {
               "title": "Zenzr",
@@ -36,10 +36,17 @@
             {
               "title": "Larsson & Lange",
               "description": "Stylist & hairdressing salon.",
-              "detailedDescription": "For this project, my area of ​​focus was to rebuild their API used for their booking system. In addition to that, I built PHP scripts where I managed old data that was integrated with the new data. Tech stack: PHP, SQL.",
+              "detailedDescription": "For this project, my area of ​focus was to rebuild their API used for their booking system. In addition to that, I built PHP scripts where I managed old data that was integrated with the new data. Tech stack: PHP, SQL.",
               "image": "/assets/larsson-lange.jpg",
               "link": "https://www.larssonlange.se/"
-            }
+            },
+            {
+              "title": "Players Unknown Battlegrounds",
+              "description": "Battle Royale game.",
+              "detailedDescription": "I have developed an API to fetch game data from the Players Unknown Battlegrounds API. Every time me or my friends wins a game the result is posted to one of my channels on my Discord server. This project is something I have done in my spare time, focusing on data management and integration with the game's backend. Feel free to visit my github below to read more in depths what I did. Tech stack: Python.",
+              "image": "/assets/pubg.jpg",
+              "link": "https://github.com/Endyzi/pubg_api"
+           }
           ]
     },
 
