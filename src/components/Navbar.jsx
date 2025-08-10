@@ -52,7 +52,8 @@ const Navbar = () => {
               display: { xs: 'none', md: 'flex' },
               gap: 3,
               flexGrow: 1,
-              justifyContent: 'center',
+              //justifyContent: 'center',
+              marginLeft: '0.1rem',
             }}
           >
             {navLinks.map((link) => (
@@ -63,7 +64,7 @@ const Navbar = () => {
                 to={link.path}
                 sx={{
                   textTransform: 'none',
-                  fontWeight: 500,
+                  fontWeight: 800,
                   fontFamily: 'Montserrat, sans-serif',
                   fontSize: '1rem',
                   px: 2,
