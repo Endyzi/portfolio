@@ -32,7 +32,7 @@ const Home = () => {
           left: 0,
           width: '100%',
           height: '100%',
-          background: 'linear-gradient(120deg, rgba(15,23,42,0.92) 20%, rgba(11,18,32,0.7) 70%)',
+          background: 'linear-gradient(120deg, rgba(15,23,42,0.92) 20%, rgba(11,18,32,0.7) 90%)',
           zIndex: 1,
         }}
       />
