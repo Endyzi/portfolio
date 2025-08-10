@@ -30,8 +30,8 @@ const Navbar = () => {
       <AppBar
         position="sticky"
         sx={{
-          backgroundColor: '#0F172A',
-          boxShadow: '0 2px 8px rgba(0,0,0,0.07)',
+          backgroundColor: '#10192eff',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.50)',
           zIndex: 1201,
         }}
       >

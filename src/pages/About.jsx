@@ -1,47 +1,83 @@
 import React from 'react';
-import { Box, Typography } from '@mui/material';
+import { Box, Container, Grid, Typography, Divider } from '@mui/material';
 import { useTranslation } from 'react-i18next';
 
 const About = () => {
-
   const { t } = useTranslation();
 
   return (
     <Box
-    sx={{
-      display: 'flex',
-      flexDirection: { xs: 'column', md: 'row' },
-      alignItems: 'center',
-      justifyContent: 'center',
-      padding: '2rem',
-      gap: '2rem',
-    }}
+      component="section"
+      id="about"
+      sx={{
+        bgcolor: '#0F172A',
+        minHeight: '100vh',                
+        py: { xs: 10, md: 14 },           
+        scrollMarginTop: { xs: 8, md: 10 } 
+      }}
     >
+      <Container maxWidth="lg">
+        <Grid
+          container
+          spacing={{ xs: 4, md: 6 }}
+          alignItems="center"
+          justifyContent="center"
+        >
+          {/* Image */}
+          <Grid item xs={12} md="auto">
+            <Box
+              component="img"
+              src="/assets/Picture_002.webp"
+              alt="Porträtt av Jonatan Nilhamn"
+              sx={{
+                display: 'block',
+                mx: { xs: 'auto', md: 0 },
+                width: { xs: '64%', sm: '48%', md: 360 },
+                height: 'auto',
+                borderRadius: 2,
+                boxShadow: '0 16px 40px rgba(0,0,0,0.45)'
+              }}
+            />
+          </Grid>
 
-    <Box
-    component="img"
-    src="/assets/Picture_002.webp"
-    alt="Jonatan Nilhamn"
-    sx={{
-      width: { xs: '50%', sm: '30%', md: '400px' },
-      marginTop: '5%',
-      height: {xs: '50%', sm: '30%',  md: 'auto'}, 
-      borderRadius: '16px',
-      boxShadow: '0 4px 10px rgba(0,0,0,0.2)',
-    }}
-    />
+          {/* Text */}
+          <Grid item xs={12} md={6}>
+            <Box sx={{ textAlign: { xs: 'center', md: 'left' }, maxWidth: 640, mx: { xs: 'auto', md: 0 } }}>
+              <Typography
+                variant="h4"
+                sx={{ fontFamily: 'Montserrat, sans-serif', fontWeight: 800, color: '#F9FAFB', letterSpacing: 1, mb: 1 }}
+              >
+                {t('about.title')}
+              </Typography>
 
-      <Box sc={{ maxWidth: '80%', textAlign: 'center'}}>
-      <Typography variant="h4" gutterBottom>
-      {t('about.title')}
-       
-        </Typography>
-        <Typography variant="body1">
-        {t('about.description')}  
-     
-        </Typography>
-      </Box>
-    </Box>  
+              <Divider
+                sx={{
+                  width: { xs: '50%', md: 140 },
+                  height: 3,
+                  bgcolor: '#06B6D4',
+                  borderRadius: 1,
+                  mb: 3,
+                  mx: { xs: 'auto', md: 0 }
+                }}
+              />
+
+              <Typography
+                variant="body1"
+                sx={{
+                  fontFamily: 'Inter, sans-serif',
+                  color: '#E5E7EB',
+                  lineHeight: 1.8,
+                  fontSize: '1.05rem',
+                  mb: 0
+                }}
+              >
+                {t('about.description')}
+              </Typography>
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 
