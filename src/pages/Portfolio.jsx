@@ -18,6 +18,7 @@ const Portfolio = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     asNavFor: slider2,
+    adaptiveHeight: true,
   };
 
   const settingsText = {
@@ -28,6 +29,7 @@ const Portfolio = () => {
     slidesToScroll: 1,
     asNavFor: slider1,
     arrows: false,
+    adaptiveHeight: true,
   };
 
   return (
@@ -36,8 +38,11 @@ const Portfolio = () => {
         variant="h4"
         sx={{
           textAlign: 'center',
-          marginBottom: { xs: '1rem', md: '2rem' },
-          fontSize: { xs: '1.5rem', md: '2.5rem' },
+          marginBottom: { xs: '1rem', md: '2rem', },
+          fontSize: { xs: '1.5rem', md: '2.5rem',
+            fontWeight: 700,
+            fontFamily: 'Inter, sans-serif'
+           },
         }}
       >
         {t('portfolio.title')}
@@ -60,8 +65,9 @@ const Portfolio = () => {
       <Box
         sx={{
           maxWidth: { xs: '100%', md: '60%' },
-          margin: '2rem auto 0',
-          padding: { xs: '0 1rem', md: '0' },
+          mx: 'auto',
+          mt: { xs: 3.5, md: 3 },
+          '& .slick-slide > div': { display: 'flex', justifyContent: 'center' },
         }}
       >
         <Slider {...settingsText} ref={(slider) => setSlider2(slider)}>
@@ -95,6 +101,8 @@ const Portfolio = () => {
                   padding: { xs: '0 1rem', md: '0.1' },
                   overflowWrap: 'break-word',
                   whiteSpace: 'normal',
+                  fontFamily: 'roboto',
+                  marginLeft: 'auto'
                 }}
               >
                 {project.detailedDescription}
