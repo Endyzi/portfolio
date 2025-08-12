@@ -124,7 +124,7 @@ const Navbar = () => {
             <Tooltip title="LinkedIn">
               <IconButton
                 component="a"
-                href="https://www.linkedin.com/in/jonatan-nilhamn/"
+                href="https://www.linkedin.com/in/jonatan-nilhamn-3b816b183/"
                 target="_blank"
                 rel="noopener noreferrer"
                 sx={{ color: '#F9FAFB', '&:hover': { color: '#06B6D4' } }}
