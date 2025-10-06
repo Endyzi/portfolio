@@ -1,60 +1,96 @@
 import React from 'react';
-import { Box, Typography, Icon, IconButton } from '@mui/material';
+import { Box, Typography, IconButton, Link as MuiLink } from '@mui/material';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
+import EmailIcon from '@mui/icons-material/Email';
 import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
-
   const { t } = useTranslation();
 
   return (
     <Box
       sx={{
-        height: '100vh',
-        backgroundImage: 'url("/assets/background.webp")', 
+        minHeight: '100vh',
+        width: '100%',
+        backgroundImage: 'url("/assets/background.webp")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        position: 'relative',
         display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: { xs: 'flex-start', md: 'flex-start' },
+        justifyContent: { xs: 'center', md: 'flex-end' },
+        pt: { xs: '10rem', sm: '11rem', md: 0 },
         color: 'white',
-        textAlign: 'center',
-        textShadow: '2px 2px 5px rgba(0, 0, 0, 0.7)',
+        overflow: 'hidden',
       }}
     >
-      <Typography variant="h2" sx={{ 
-        marginTop: {xs: '-80vh', sm: '-800px', md: '-950px'} ,
-        marginLeft: {xs: '5px', md: '1800px'},
-        fontSize: { xs: '2rem', md: '3rem' } }}>
-       {t('contact.title')}
-      </Typography>
-      <Typography variant="h5" sx={{ fontSize: { xs: '1rem', md: '1.5rem' }, marginTop: {xs: '1rem', md: '1rem'}, marginLeft: {xs: '5px', md: '1800px'}  }}>
-      {t('contact.email')}
-      </Typography>
+      
+      <Box
+        sx={{
+          position: 'absolute',
+          inset: 0,
+          background: 'linear-gradient(90deg, rgba(2,6,23,0.25) 0%, rgba(2,6,23,0.6) 70%)',
+          zIndex: 1,
+        }}
+      />
 
-      <Box>
-      <IconButton
-        color="inherit"
-        href="https://www.linkedin.com/in/jonatan-nilhamn-3b816b183/"
-        target="_blank"
-        rel="noopener noreferrer"
-        sx={{ marginLeft: { xs: '5px',  md: '1800px'}  }}
+      {/* content wrapper */}
+      <Box 
+        sx={{ 
+          position: 'relative', 
+          zIndex: 2, 
+          width: '100%',
+          display: 'flex',
+          justifyContent: { xs: 'center', md: 'flex-end' },
+          alignItems: { xs: 'flex-start', md: 'flex-start' },
+          px: { xs: 3, sm: 4, md: 8 },
+          pt: { md: '12rem', lg: '10rem' }
+        }}
+      >
+        {/* contact card */}
+        <Box
+          sx={{
+            maxWidth: { xs: '90%', sm: 560, md: 520 },
+            width: '100%',
+            textAlign: { xs: 'center', md: 'right' },
+            mr: { md: '4vw', lg: '6vw', xl: '8vw' }
+          }}
         >
-            <LinkedInIcon/>
-        </IconButton>
-        
-        <IconButton
-        color="inherit"
-        href="https://github.com/endyzi"
-        target="_blank"
-        rel="noopener noreferrer"
-        sx={{ mx: 1 }}
-        >
-            <GitHubIcon/>
-        </IconButton>
+          <Typography
+            variant="h2"
+            sx={{
+              fontSize: { xs: '2.5rem', sm: '3rem', md: '4rem', lg: '4.5rem' },
+              fontFamily: 'Montserrat, sans-serif',
+              fontWeight: 700,
+              color: '#F9FAFB',
+              mb: 2,
+              lineHeight: 1.1,
+            }}
+          >
+            {t('contact.title')}
+          </Typography>
+
+          <MuiLink
+            href={`mailto:${t('contact.email')}`}
+            sx={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: 1,
+              fontSize: { xs: '1rem', md: '1.25rem', lg: '1.4rem' },
+              color: '#E6EEF6',
+              textDecoration: 'none',
+              transition: 'color 0.3s ease',
+              '&:hover': {
+                color: '#06B6D4',
+              },
+            }}
+          >
+            <EmailIcon fontSize="medium" sx={{ color: '#06B6D4' }} />
+            {t('contact.email')}
+          </MuiLink>
         </Box>
+      </Box>
     </Box>
   );
 };
