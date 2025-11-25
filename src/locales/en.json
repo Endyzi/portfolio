@@ -40,6 +40,12 @@
               "image": "/assets/larsson-lange.jpg",
               "link": "https://www.larssonlange.se/"
             },
+               {
+              "title": "MAX IV Laboratory",
+              "description": "DUO Staying Alive",
+              "detailedDescription": "I'm currently stationed at MAX IV Laboratory, working with the migration and modernization of their Digital User Office (DUO) system from Oracle to PostgreSQL. This involves systematically refactoring a legacy PHP codebase, converting complex Oracle-specific SQL to PostgreSQL-compliant queries while maintaining data integrity across critical scientific research workflows. Key achievements include resolving intricate parameter binding conflicts, implementing proper type casting for PostgreSQL's stricter type system, and converting Oracle functions (DECODE, NVL, etc) to standards-compliant SQL. I've optimized multiple visitor management and beamline certification interfaces, among many other views/pages. It is fun to work for a system supporting one of Europe's leading synchrotron radiation facilities. The work requires deep understanding of database abstraction layers (ADODB), cross-database compatibility challenges, and the ability to navigate and improve legacy systems while maintaining backwards compatibility. Tech stack: PHP 7.4, PostgreSQL 16.8, Oracle Database, ADODB, Git. Due to GDPR i cannot show any more information because it's an internal system.   ",
+              "image": "/assets/maxiv.webp"
+           },
             {
               "title": "Players Unknown Battlegrounds",
               "description": "Battle Royale game.",
